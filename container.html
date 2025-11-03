@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Container Calculator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:linear-gradient(135deg,#007bff,#00c6ff);
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:30px 10px;
+}
+header{text-align:center;margin-bottom:15px;}
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+  padding:25px;
+  width:100%;
+  max-width:420px;
+}
+label{display:block;margin:10px 0 4px;font-weight:500;}
+input,select{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  margin-bottom:12px;
+  font-family:inherit;
+  font-size:1rem;
+}
+button{
+  width:100%;
+  background:#fff;
+  color:#007bff;
+  border:none;
+  border-radius:10px;
+  padding:12px;
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover{background:#e8f0ff;}
+.result{
+  margin-top:15px;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  padding:10px;
+  font-weight:500;
+  text-align:center;
+}
+.back{
+  margin-top:15px;
+  background:rgba(255,255,255,0.25);
+  color:#fff;
+}
+footer{margin-top:25px;opacity:.8;font-size:.9rem;text-align:center;}
+@media (max-width:600px){
+  .card{padding:20px;}
+  button{padding:14px;font-size:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🚢 Container Calculator</h1>
+  <p>Estimate required containers for your cargo</p>
+</header>
+
+<div class="card">
+  <label>Length</label><input id="len" type="number" placeholder="Enter length">
+  <label>Width</label><input id="wid" type="number" placeholder="Enter width">
+  <label>Height</label><input id="hei" type="number" placeholder="Enter height">
+  <label>Quantity</label><input id="qty" type="number" placeholder="Enter number of items">
+
+  <label>Unit</label>
+  <select id="unit">
+    <option value="m">Meter (m)</option>
+    <option value="cm">Centimeter (cm)</option>
+    <option value="ft">Feet (ft)</option>
+  </select>
+
+  <label>Container Type</label>
+  <select id="type">
+    <option value="20ft">20ft (33.2 m³)</option>
+    <option value="40ft">40ft (67.7 m³)</option>
+    <option value="small">Small (25 m³)</option>
+  </select>
+
+  <button onclick="calc()">Calculate</button>
+  <div class="result" id="res"></div>
+  <button class="back" onclick="location.href='index.html'">⬅ Back to Home</button>
+</div>
+
+<footer>© 2025 Smart Cargo</footer>
+
+<script>
+function toM(v,u){
+  if(u==='cm')return v/100;
+  if(u==='ft')return v*0.3048;
+  return v;
+}
+function calc(){
+  const l=+len.value,w=+wid.value,h=+hei.value,q=+qty.value;
+  const u=unit.value,t=type.value;
+  if(l<=0||w<=0||h<=0||q<=0){res.textContent="Please enter valid values.";return;}
+  const L=toM(l,u),W=toM(w,u),H=toM(h,u);
+  const vol=L*W*H*q;
+  const cap={ '20ft':33.2, '40ft':67.7, 'small':25 }[t];
+  const need=Math.ceil(vol/cap);
+  const util=Math.min(100,(vol/(need*cap))*100);
+  res.innerHTML=`Total Volume: <b>${vol.toFixed(2)} m³</b><br>Containers Needed: <b>${need}</b><br>Utilization: ${util.toFixed(1)}%`;
+}
+</script>
+</body>
+</html>
