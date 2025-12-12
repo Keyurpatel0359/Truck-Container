@@ -3,236 +3,233 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Blisee | Social Media Marketing, Meta Ads, SEO & Website Development</title>
 
-<meta name="description" content="Blisee is a modern digital marketing agency offering Social Media Marketing, Meta Ads Management, SEO, and Website Development services to help businesses grow fast.">
+<title>Blisee — SMM, Meta Ads, SEO & Website Agency</title>
+<meta name="description" content="Blisee is a premium digital marketing agency offering Social Media Marketing, Meta Ads, SEO services and Website development.">
+<meta name="author" content="Blisee Agency">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Poppins", sans-serif;
+    font-family:"Inter", sans-serif;
 }
 body{
-    background:#f7f7fb;
-    color:#1a1a2e;
+    background:#ffffff;
+    color:#000000;
+}
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 /* NAVBAR */
 nav{
     width:100%;
-    padding:20px 7%;
+    padding:22px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     background:white;
     position:sticky;
     top:0;
-    z-index:1000;
-    border-bottom:1px solid #eee;
+    z-index:20;
+    border-bottom:1px solid #ececec;
 }
 nav .logo{
-    font-size:28px;
-    font-weight:700;
-    color:#7b3fe4;
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:-1px;
 }
 nav ul{
-    display:flex;
-    gap:25px;
     list-style:none;
+    display:flex;
+    gap:35px;
 }
 nav ul li a{
-    text-decoration:none;
-    color:#1a1a2e;
     font-weight:500;
 }
 nav ul li a:hover{
-    color:#7b3fe4;
+    opacity:0.6;
 }
 
 /* HERO */
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:100px 7%;
-    background:white;
+    padding:140px 6%;
+    text-align:left;
+    max-width:950px;
+    margin:auto;
 }
-.hero-text{
-    max-width:550px;
+.hero h1{
+    font-size:64px;
+    font-weight:900;
+    line-height:1.1;
 }
-.hero-text h1{
-    font-size:45px;
-    font-weight:700;
-    color:#1a1a2e;
+.hero p{
+    font-size:20px;
+    color:#5f5f5f;
+    margin-top:25px;
+    max-width:600px;
 }
-.hero-text span{
-    color:#7b3fe4;
-}
-.hero-text p{
-    margin:20px 0;
-    font-size:17px;
-    color:#555;
-    line-height:1.6;
-}
-.btn{
+.hero .btn{
     display:inline-block;
-    padding:12px 28px;
-    background:#7b3fe4;
+    margin-top:35px;
+    padding:16px 40px;
+    background:black;
     color:white;
-    border-radius:8px;
-    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    border-radius:4px;
 }
-.btn:hover{
-    background:#652fc9;
-}
-.hero img{
-    width:480px;
-    border-radius:20px;
+.hero .btn:hover{
+    background:#222;
 }
 
 /* SECTION TITLE */
 .section-title{
-    text-align:center;
-    margin-top:80px;
+    padding:90px 6% 30px;
+    text-align:left;
 }
 .section-title h2{
-    font-size:32px;
-    font-weight:700;
-    color:#1a1a2e;
-}
-.section-title p{
-    margin-top:10px;
-    color:#555;
+    font-size:40px;
+    font-weight:800;
 }
 
 /* SERVICES */
 .services{
+    padding:0 6% 70px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    padding:50px 7%;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
 }
 .service-box{
-    background:white;
-    padding:25px;
+    padding:40px 30px;
+    border:1px solid #e6e6e6;
     border-radius:14px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.06);
     transition:0.3s;
 }
 .service-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    background:#fafafa;
 }
 .service-box h3{
     font-size:22px;
-    color:#7b3fe4;
+    font-weight:700;
+    margin-bottom:15px;
 }
 .service-box p{
-    margin-top:10px;
-    color:#444;
-    font-size:15px;
+    color:#4d4d4d;
     line-height:1.6;
 }
 
-/* ABOUT */
-.about{
-    padding:80px 7%;
-    background:#fff;
+/* SPLIT SECTION (ABOUT) */
+.split{
     display:flex;
-    gap:50px;
+    padding:110px 6%;
     align-items:center;
+    gap:60px;
 }
-.about img{
-    width:450px;
-    border-radius:16px;
+.split div{
+    flex:1;
 }
-.about-text h2{
-    font-size:32px;
-    font-weight:700;
+.split img{
+    width:100%;
+    border-radius:12px;
 }
-.about-text p{
-    margin-top:15px;
+.split h2{
+    font-size:40px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+.split p{
+    color:#4a4a4a;
     line-height:1.7;
-    color:#555;
+    font-size:18px;
 }
 
 /* PRICING */
 .pricing{
+    padding:0 6% 70px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    padding:60px 7%;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
 }
 .plan{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.06);
+    padding:40px;
+    border:1px solid #e6e6e6;
+    border-radius:14px;
+    text-align:left;
 }
 .plan h3{
-    font-size:24px;
-    color:#7b3fe4;
+    font-size:26px;
+    font-weight:800;
 }
-.plan .price{
-    margin:15px 0;
-    font-size:30px;
-    font-weight:700;
-    color:#1a1a2e;
+.price{
+    font-size:42px;
+    font-weight:900;
+    margin:18px 0;
 }
 .plan ul{
     list-style:none;
-    margin:20px 0;
+    margin-bottom:25px;
 }
 .plan ul li{
-    padding:8px 0;
-    color:#444;
+    padding:7px 0;
+    color:#4a4a4a;
+}
+.plan a{
+    padding:12px 25px;
+    background:black;
+    color:white;
+    font-weight:600;
+    border-radius:4px;
+}
+.plan a:hover{
+    background:#222;
 }
 
 /* CONTACT */
 .contact{
-    background:white;
-    padding:80px 7%;
-}
-.contact-details{
-    margin-top:20px;
+    padding:120px 6%;
+    background:#fafafa;
     text-align:center;
+}
+.contact h2{
+    font-size:42px;
+    font-weight:900;
+}
+.contact p{
+    font-size:20px;
+    margin:10px 0;
 }
 
 /* FOOTER */
 footer{
-    text-align:center;
     padding:25px;
-    background:#7b3fe4;
+    text-align:center;
+    background:#000;
     color:white;
-    margin-top:50px;
+    margin-top:60px;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-    .hero{
+    .hero h1{
+        font-size:48px;
+    }
+    .split{
         flex-direction:column;
         text-align:center;
     }
-    .hero img{
-        width:90%;
-        margin-top:40px;
-    }
-    .about{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
-    .about img{
-        width:100%;
+    nav ul{
+        display:none;
     }
 }
 </style>
-
 </head>
+
 <body>
 
 <!-- NAV -->
@@ -248,109 +245,104 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-text">
-        <h1>Grow Your Business with <span>Blisee</span></h1>
-        <p>We help brands scale with powerful Social Media Marketing, high-ROI Meta Ads, advanced SEO, and conversion-focused Website Development.</p>
-        <a href="#contact" class="btn">Get Free Consultation</a>
-    </div>
-    <img src="https://via.placeholder.com/480x400" alt="Marketing Image">
+    <h1>Premium Digital Growth For Modern Businesses</h1>
+    <p>Blisee helps brands scale with high-impact Social Media Marketing, performance-driven Meta Ads, SEO optimisation and elite website development.</p>
+    <a href="#contact" class="btn">Get Started</a>
 </section>
+
+<!-- SERVICES TITLE -->
+<div class="section-title" id="services">
+    <h2>Services We Provide</h2>
+</div>
 
 <!-- SERVICES -->
-<div class="section-title" id="services">
-    <h2>Our Services</h2>
-    <p>Everything you need to grow your business online</p>
-</div>
-
 <section class="services">
     <div class="service-box">
-        <h3>📱 Social Media Marketing</h3>
-        <p>We create content strategies, manage profiles, grow engagement, and build your brand presence across Instagram, Facebook & LinkedIn.</p>
+        <h3>Social Media Marketing</h3>
+        <p>Strategic content, reels, engagement growth & full Instagram / Facebook management designed for business results.</p>
     </div>
-
     <div class="service-box">
-        <h3>📈 Meta Ads Management</h3>
-        <p>We run high-converting Meta (Facebook + Instagram) ad campaigns with advanced targeting, retargeting, ROI optimization & A/B testing.</p>
+        <h3>Meta Ads Management</h3>
+        <p>Performance ads, conversions, retargeting and sales-driven campaigns with ROI reporting.</p>
     </div>
-
     <div class="service-box">
-        <h3>🔍 SEO Optimization</h3>
-        <p>Boost your Google ranking with on-page SEO, off-page SEO, keyword strategy, content optimization, and technical SEO audits.</p>
+        <h3>SEO Optimization</h3>
+        <p>Google ranking boost with technical SEO, keyword research, backlinks and on-page mastery.</p>
     </div>
-
     <div class="service-box">
-        <h3>🌐 Website Development</h3>
-        <p>Get fast, modern, mobile-friendly websites that attract visitors and convert them into real customers. Landing pages, business sites & e-commerce.</p>
+        <h3>Website Development</h3>
+        <p>Clean, fast and professional websites built for credibility, conversions and brand identity.</p>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-    <img src="https://via.placeholder.com/450x350" alt="About Blisee">
-    <div class="about-text">
+<!-- ABOUT SPLIT -->
+<section class="split" id="about">
+    <div>
         <h2>About Blisee</h2>
-        <p>Blisee is a results-driven digital marketing agency focused on helping businesses grow using data-driven strategies and creative execution.  
-        We combine strong branding, high-performance marketing, and clean UI/UX to deliver growth that is measurable and sustainable.</p>
+        <p>We are a performance-driven digital agency focused on creating powerful online presence.
+
+           With proven expertise in SMM, paid ads, SEO, and modern website design, we help businesses grow sustainably, build brand authority and attract high-value customers.</p>
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/500x340" alt="Team Blisee">
     </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING TITLE -->
 <div class="section-title" id="pricing">
-    <h2>Pricing Plans</h2>
-    <p>Flexible plans designed for all types of businesses</p>
+    <h2>Our Pricing Plans</h2>
 </div>
 
+<!-- PRICING -->
 <section class="pricing">
     <div class="plan">
-        <h3>Starter</h3>
-        <div class="price">₹4,999 / month</div>
+        <h3>Starter Pack</h3>
+        <div class="price">₹4,999</div>
         <ul>
-            <li>Instagram Management</li>
-            <li>8 Posts Per Month</li>
+            <li>IG Management</li>
+            <li>10 Posts / Month</li>
             <li>Basic SEO Setup</li>
-            <li>Monthly Report</li>
+            <li>Monthly Analytics</li>
         </ul>
-        <a href="#contact" class="btn">Choose Plan</a>
+        <a href="#contact">Select</a>
     </div>
 
     <div class="plan">
-        <h3>Growth</h3>
-        <div class="price">₹9,999 / month</div>
+        <h3>Growth Pack</h3>
+        <div class="price">₹9,999</div>
         <ul>
-            <li>Instagram + Facebook</li>
-            <li>15 Posts Per Month</li>
-            <li>Meta Ads Management</li>
-            <li>Standard SEO + Website Optimization</li>
+            <li>IG + FB Management</li>
+            <li>Meta Ads</li>
+            <li>SEO Improvements</li>
+            <li>15 Posts / Month</li>
         </ul>
-        <a href="#contact" class="btn">Choose Plan</a>
+        <a href="#contact">Select</a>
     </div>
 
     <div class="plan">
-        <h3>Premium</h3>
-        <div class="price">₹16,999 / month</div>
+        <h3>Premium Pack</h3>
+        <div class="price">₹16,999</div>
         <ul>
-            <li>All Platform Management</li>
-            <li>Full Meta Ads + Retargeting</li>
-            <li>Advanced SEO + Backlinks</li>
-            <li>High-Quality Website Development</li>
+            <li>All Platforms</li>
+            <li>Full Ads + Retargeting</li>
+            <li>Advanced SEO</li>
+            <li>Website Included</li>
         </ul>
-        <a href="#contact" class="btn">Choose Plan</a>
+        <a href="#contact">Select</a>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-    <div class="section-title"><h2>Contact Us</h2></div>
-    <div class="contact-details">
-        <p>📞 Phone: +91 98765 43210</p>
-        <p>📧 Email: support@blisee.com</p>
-        <p>🌐 Website: www.blisee.com</p>
-    </div>
+    <h2>Contact Us</h2>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 support@blisee.com</p>
+    <p>Let’s grow your brand with the power of digital marketing.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    © 2025 Blisee — All Rights Reserved.
+    © 2025 Blisee — Premium Marketing Agency
 </footer>
 
 </body>
